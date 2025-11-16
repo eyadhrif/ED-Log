@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EDΞ Log </title>
-  <!DOCTYPE html>
-  <!--  Im gonna add later the links of css files  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATK'Log</title>
+    <title>EDΞ Log </title>
+
     <link rel="icon" href="Images/emoji_image.png" type="image/png">
     <link rel="stylesheet" href="Styles/general.css">
     <link rel="stylesheet" href="Styles/about.css">
@@ -18,6 +13,7 @@
     <link rel="stylesheet" href="Styles/contact.css">
     <link rel="stylesheet" href="Styles/phonescreencss.css">
     <link rel="stylesheet" href="Styles/posts.css">
+    <link rel="stylesheet" href="Styles/fireworks.css">
     <script src="https://kit.fontawesome.com/d72947389b.js" crossorigin="anonymous"></script>
 </head>
 
@@ -25,6 +21,7 @@
 
 <body>
    <div id="header">
+    
         <div class="container">
             <nav>
                 
@@ -42,7 +39,7 @@
             </nav>
             <div class="headertext">
                 <p>Exploring Data & AI</p>
-                <h1>Hi, I'm Eya <br> Dhrif </h1>
+                <h1>Hi, I'm Eya Dhrif </h1>
                 <div class="socialicons">
                     <!-- <a href=""><i class="fa-brands fa-facebook"></i></a> -->
                     <a href="https://github.com/eyadhrif", target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -70,7 +67,7 @@
                 </div>
                 <div class="aboutcol2">
                     <h1 class="subtitle">About Me</h1>
-                    <p>Welcome to EDΞ Log — my digital space where logic meets imagination. I’m an engineering student passionate about applied mathematics, AI, and modeling, constantly exploring how ideas evolve into innovation. For me, engineering is a creative process — a journey of transforming equations into stories, data into meaning, and systems into intelligent possibilities. Here, I experiment, learn, and design, pushing the boundaries between science and art to create solutions that connect theory with real-world impact. Each project is a step forward — a reflection of curiosity, precision, and the endless pursuit of discovery.</p>
+                    <p>Welcome to EDΞ Log, my digital space where logic meets imagination. I’m an engineering student passionate about applied mathematics, AI, and modeling, constantly exploring how ideas evolve into innovation. For me, engineering is a creative process, a journey of transforming equations into stories, data into meaning, and systems into intelligent possibilities. Here, I experiment, learn, and design, pushing the boundaries between science and art to create solutions that connect theory with real-world impact. Each project is a step forward, a reflection of curiosity, precision, and the endless pursuit of discovery.</p>
                 
                     <div class="tabtitles">
                         <p class="tablinks activelink" onclick="opentab('skills')">Skills</p>
@@ -285,7 +282,16 @@
                     <span id="msg"></span>
                 </div>
             </div>
+            <div class="copyright">
+                <p>
+                    Copyright © Dhrif Eya. 2025 All rights reserved
+                </p>
+            </div>
+        <button id="scrollTopBtn" title="Go to top">↑</button>
+
         </div>
+
+
 <script>
     var tablinks = document.getElementsByClassName("tablinks")
     var tabcontents = document.getElementsByClassName("tabcontents")
@@ -354,6 +360,28 @@
   });
 </script>
 
+
+<script>
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  window.addEventListener("scroll", () => {
+    const headerHeight = document.getElementById("header").offsetHeight;
+    if (window.scrollY > headerHeight) {
+      scrollTopBtn.classList.add("show");
+    } else {
+      scrollTopBtn.classList.remove("show");
+    }
+  });
+
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+<script src="Scripts/fireworks_effect.js"></script>
 
 </body>
 </html> 
